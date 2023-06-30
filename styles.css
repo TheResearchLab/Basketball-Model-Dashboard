@@ -172,7 +172,7 @@ aside .sidebar {
     background: var(--color-white);
     display: flex;
     flex-direction: column;
-    height: 86vh;
+    height: 80vh;
     position: relative;
     top: 3rem;
 }
@@ -583,7 +583,7 @@ main .incorrect {
 
 
 .pageTitle {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -593,10 +593,38 @@ main .incorrect {
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
     transition: all 200ms ease;
-    height: 46rem
+    height: 80vh;
 }
 
 .calendar:hover {
     box-shadow: none;
+}
+
+.calendar ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+main header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+main header .current-date {
+    font-size: 1.45rem;
+    font-weight: 500rem;
+}
+
+main header .calendarNav span:hover {
+    color: var(--color-primary);
+    background-color: var(--color-info-dark);
+    border-radius: 10px;
+}
+
+main header .calendarNav span:last-child {
+    margin-left: 10px;
 }
 
