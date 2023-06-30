@@ -15,6 +15,9 @@ const settingsBtn = document.querySelector("#settings");
 const mainView = document.querySelector("main");
 const rightView = document.querySelector(".right");
 
+//container
+const container = document.querySelector('.container');
+
 // open and close sidebar
 menuBtn.addEventListener('click', ()=> {
     sideMenu.style.display = 'block';
@@ -73,6 +76,14 @@ dashboardBtn.addEventListener('click', function(e) {
 upcomingBtn.addEventListener('click', function(e) {
     changeActivePage(e,"#upcoming"); 
     clearPage(); 
+    mainView.innerHTML = `
+        <h1 class="pageTitle">Upcoming</h1>
+        <div class="calendar">
+                
+        </div>
+    `
+    container.style.gridTemplateColumns = '15rem 80rem auto';
+    console.log('done');
 });
 
 performanceBtn.addEventListener('click', function(e) {

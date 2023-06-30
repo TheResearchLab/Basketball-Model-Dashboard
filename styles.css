@@ -579,3 +579,24 @@ main .incorrect {
 
 }
 
+/* ================== Calendar ===================== */
+
+
+.pageTitle {
+    margin-bottom: 5rem;
+}
+
+
+.calendar {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 200ms ease;
+    height: 46rem
+}
+
+.calendar:hover {
+    box-shadow: none;
+}
+
