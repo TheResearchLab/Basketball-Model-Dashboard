@@ -96,10 +96,10 @@ upcomingBtn.addEventListener('click', function(e) {
             <li>Sat</li>
         </ul>
         <ul class="days">
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
+            <li class="inactive">28</li>
+            <li class="inactive">29</li>
+            <li class="inactive">30</li>
+            <li class="inactive">31</li>
             <li>1</li>
             <li>2</li>
             <li>3</li>
@@ -130,7 +130,7 @@ upcomingBtn.addEventListener('click', function(e) {
             <li>28</li>
             <li>29</li>
             <li>30</li>
-            <li>1</li>
+            <li class="inactive">1</li>
         </ul>
                 
         </div>

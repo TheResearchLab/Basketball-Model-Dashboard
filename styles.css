@@ -586,26 +586,6 @@ main .incorrect {
     margin-bottom: 1rem;
 }
 
-
-.calendar {
-    background: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--box-shadow);
-    transition: all 200ms ease;
-    height: 80vh;
-}
-
-.calendar:hover {
-    box-shadow: none;
-}
-
-.calendar ul {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
 main header {
     display: flex;
     align-items: center;
@@ -627,4 +607,67 @@ main header .calendarNav span:hover {
 main header .calendarNav span:last-child {
     margin-left: 10px;
 }
+
+.calendar {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 200ms ease;
+}
+
+.calendar:hover {
+    box-shadow: none;
+}
+
+.calendar ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+.calendar .weeks li {
+    font-weight: 500;
+}
+
+.calendar .days {
+    margin-bottom:20px;
+}
+
+.calendar ul li {
+    position: relative;
+    width: calc(100%/7);
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    color: var(--color-primary);
+    margin-top: 70px;
+}
+
+/* Need to understand what's going on */
+.calendar .days li::before {
+    position: absolute;
+    content:"";
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li:hover::before {
+    background: var(--color-info-light);
+}
+
+.days li.inactive {
+    color:lightgray;
+}
+
+
 
