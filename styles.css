@@ -645,7 +645,7 @@ main header .calendarNav span:last-child {
     z-index: 1;
     cursor: pointer;
     color: var(--color-primary);
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 /* Need to understand what's going on */
