@@ -15,6 +15,8 @@ const settingsBtn = document.querySelector("#settings");
 const mainView = document.querySelector("main");
 const rightView = document.querySelector(".right");
 
+const months = ['January', 'February','March','April','May','June','July','August','September','October', 'November','December'];
+
 //container
 const container = document.querySelector('.container');
 
@@ -261,12 +263,14 @@ dashboardBtn.addEventListener('click', function(e) {
 });
 
 upcomingBtn.addEventListener('click', function(e) {
+    let date = new Date();
+    
     changeActivePage(e,"#upcoming"); 
     clearPage(); 
     mainView.innerHTML = `
         <h1 class="pageTitle">Upcoming</h1>
         <header>
-        <p class="current-date">September 2022</p>
+        <p class="current-date">${months[date.getMonth()]} ${date.getFullYear()}</p>
         <div class="calendarNav">
             <span class="material-symbols-outlined">chevron_left</span>
             <span class ="material-symbols-outlined">chevron_right</span>
@@ -323,7 +327,7 @@ upcomingBtn.addEventListener('click', function(e) {
         </div>
     `
     container.style.gridTemplateColumns = '15rem 80rem auto';
-    console.log('done');
+    console.log(mainView.querySelector(".current-date").innerText);
 });
 
 performanceBtn.addEventListener('click', function(e) {
