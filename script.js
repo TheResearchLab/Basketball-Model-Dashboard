@@ -1,9 +1,12 @@
 'use strict';
 
+
+
 const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 let themeToggler = document.querySelector(".theme-toggler");
+
 // Pages
 const dashboardBtn = document.querySelector("#dashboard"); 
 const upcomingBtn = document.querySelector("#upcoming");
@@ -33,6 +36,7 @@ const toggleTheme = function() {
     themeToggler.querySelectorAll('span')[0].classList.toggle('active');
     themeToggler.querySelectorAll('span')[1].classList.toggle('active');
     document.body.classList.toggle('dark-theme-variables');
+    console.log('click');
 }
 
 // Light - Dark Theme
@@ -260,11 +264,12 @@ dashboardBtn.addEventListener('click', function(e) {
             </div>
     `
     container.style.gridTemplateColumns = '15rem auto 23rem';
+    themeToggler = document.querySelector(".theme-toggler");
+    themeToggler.addEventListener('click',toggleTheme);
 });
 
 upcomingBtn.addEventListener('click', function(e) {
     let date = new Date();
-    
     changeActivePage(e,"#upcoming"); 
     clearPage(); 
     mainView.innerHTML = `
