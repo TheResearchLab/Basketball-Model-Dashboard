@@ -1,6 +1,6 @@
 'use strict';
 
-
+// This will become a controller
 
 const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");
@@ -59,20 +59,29 @@ const changeActivePage = function(e,pageId) {
 }
 
 const clearPage = function() {
-    mainView.innerHTML = ''; 
-    rightView.innerHTML = `
-    <div class="top">
-        <button id="menu-btn">
-            <span class="material-symbols-outlined">menu</span>
-        </button> 
-        <div class="theme-toggler">
-            <span class="material-symbols-outlined active">light_mode</span>
-            <span class="material-symbols-outlined">dark_mode</span>
+    
+    if(themeToggler.querySelectorAll('span')[1].classList.contains('active')) {
+        mainView.innerHTML = ''; 
+        rightView.innerHTML = `
+        <div class="top">
+            <button id="menu-btn">
+                <span class="material-symbols-outlined">menu</span>
+            </button> 
+            <div class="theme-toggler">
+                <span class="material-symbols-outlined active">light_mode</span>
+                <span class="material-symbols-outlined">dark_mode</span>
+            </div>
         </div>
-    </div>
- `;
-    themeToggler = document.querySelector(".theme-toggler");
-    themeToggler.addEventListener('click',toggleTheme);
+     `;
+     themeToggler = document.querySelector(".theme-toggler");
+     themeToggler.addEventListener('click',toggleTheme); 
+     themeToggler.querySelectorAll('span')[0].classList.toggle('active');
+     themeToggler.querySelectorAll('span')[1].classList.toggle('active');
+    }
+    
+    
+    
+
 }
 
 dashboardBtn.addEventListener('click', function(e) {
@@ -265,7 +274,11 @@ dashboardBtn.addEventListener('click', function(e) {
     `
     container.style.gridTemplateColumns = '15rem auto 23rem';
     themeToggler = document.querySelector(".theme-toggler");
-    themeToggler.addEventListener('click',toggleTheme);
+    // themeToggler.addEventListener('click',toggleTheme);
+    
+    
+
+
 });
 
 upcomingBtn.addEventListener('click', function(e) {
@@ -333,6 +346,8 @@ upcomingBtn.addEventListener('click', function(e) {
     `
     container.style.gridTemplateColumns = '15rem 80rem auto';
     console.log(mainView.querySelector(".current-date").innerText);
+    // themeToggler.querySelectorAll('span')[0].classList.add('active');
+    // themeToggler.querySelectorAll('span')[1].classList.remove('active');
 });
 
 performanceBtn.addEventListener('click', function(e) {

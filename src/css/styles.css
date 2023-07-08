@@ -359,22 +359,29 @@ main .incorrect {
 }
 
 /* must have to do with the logic of screen size */
-.right .top button {
+.topBtn button {
     display: none;
 }
 
-.right .theme-toggler {
+.topBtn {
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+}
+
+.theme-toggler {
     background: var(--color-light) ;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row-reverse;
+    align-items: right;
     height: 1.6rem;
     width: 4.2rem;
     cursor: pointer;
     border-radius: var(--border-radius-1)
 }
 
-.right .theme-toggler span {
+.theme-toggler span {
     font-size: 1.2rem;
     width: 50%;
     height: 100%;
@@ -383,7 +390,8 @@ main .incorrect {
     justify-content: center;
 }
 
-.right .theme-toggler span.active {
+
+.theme-toggler span.active {
     background: var(--color-primary);
     color: white;
     border-radius: var(--border-radius-1);
