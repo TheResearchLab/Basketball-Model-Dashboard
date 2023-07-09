@@ -16,7 +16,7 @@ const aboutUsBtn = document.querySelector("#aboutUs");
 const settingsBtn = document.querySelector("#settings");
 
 const mainView = document.querySelector("main");
-const rightView = document.querySelector(".right");
+const rightBottomView = document.querySelector(".rightBottom");
 
 const months = ['January', 'February','March','April','May','June','July','August','September','October', 'November','December'];
 
@@ -59,30 +59,9 @@ const changeActivePage = function(e,pageId) {
 }
 
 const clearPage = function() {
-    
-    if(themeToggler.querySelectorAll('span')[1].classList.contains('active')) {
-        mainView.innerHTML = ''; 
-        rightView.innerHTML = `
-        <div class="top">
-            <button id="menu-btn">
-                <span class="material-symbols-outlined">menu</span>
-            </button> 
-            <div class="theme-toggler">
-                <span class="material-symbols-outlined active">light_mode</span>
-                <span class="material-symbols-outlined">dark_mode</span>
-            </div>
-        </div>
-     `;
-     themeToggler = document.querySelector(".theme-toggler");
-     themeToggler.addEventListener('click',toggleTheme); 
-     themeToggler.querySelectorAll('span')[0].classList.toggle('active');
-     themeToggler.querySelectorAll('span')[1].classList.toggle('active');
+    mainView.innerHTML = ''; 
+    rightBottomView.innerHTML = '';
     }
-    
-    
-    
-
-}
 
 dashboardBtn.addEventListener('click', function(e) {
     changeActivePage(e,"#dashboard"); 
@@ -211,66 +190,53 @@ dashboardBtn.addEventListener('click', function(e) {
             <a href="#">Show All</a>
         </div>
     `
-    rightView.innerHTML = `
-        <div class="top">
-                <button id="menu-btn">
-                    <span class="material-symbols-outlined">menu</span>
-                </button> 
-                <div class="theme-toggler">
-                    <span class="material-symbols-outlined active">light_mode</span>
-                    <span class="material-symbols-outlined">dark_mode</span>
-                </div>
-                </div>
-                <!----------------- END OF TOP --------------->
-                <div class="upcoming-schedule">
-                    <h2>Upcoming Schedule</h2>
-                    <div class="schedule">
-                        <div class="next-game">
-                            <div class="message">
-                                <p><b>Detroit @ Portland</b> Portland is the favorite</p>
-                                <small class="text-muted">Sunday @ 8pm</small>
-                            </div>
-                        </div>
-                        <div class="next-game">
-                            <div class="message">
-                                <p><b>Philli @ Phoenix</b> Phoenix is the favorite </p>
-                                <small class="text-muted">Sunday @ 8pm</small>
-                            </div>
-                        </div>
-                        <div class="next-game">
-                            <div class="message">
-                                <p><b>GSW @ New Orleans</b> GSW is the favorite</p>
-                                <small class="text-muted">Sunday @ 8pm</small>
-                            </div>
-                        </div>
-                        <div class="next-game">
-                            <div class="message">
-                                <p><b>Detroit @ Portland</b> Portland is the favorite</p>
-                                <small class="text-muted">Sunday @ 8pm</small>
-                            </div>
-                        </div>
-                        <div class="next-game">
-                            <div class="message">
-                                <p><b>Philli @ Phoenix</b> Phoenix is the favorite </p>
-                                <small class="text-muted">Sunday @ 8pm</small>
-                            </div>
-                        </div>
-                        <div class="next-game">
-                            <div class="message">
-                                <p><b>GSW @ New Orleans</b> GSW is the favorite</p>
-                                <small class="text-muted">Sunday @ 8pm</small>
-                            </div>
-                        </div>
-                        <div class="next-game">
-                            <div class="message">
-                                <p><b>GSW @ New Orleans</b> GSW is the favorite</p>
-                                <small class="text-muted">Sunday @ 8pm</small>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">Show All</a>
-                </div>
+    rightBottomView.innerHTML = `
+    <h2>Upcoming Schedule</h2>
+    <div class="schedule">
+        <div class="next-game">
+            <div class="message">
+                <p><b>Detroit @ Portland</b> Portland is the favorite</p>
+                <small class="text-muted">Sunday @ 8pm</small>
             </div>
+        </div>
+        <div class="next-game">
+            <div class="message">
+                <p><b>Philli @ Phoenix</b> Phoenix is the favorite </p>
+                <small class="text-muted">Sunday @ 8pm</small>
+            </div>
+        </div>
+        <div class="next-game">
+            <div class="message">
+                <p><b>GSW @ New Orleans</b> GSW is the favorite</p>
+                <small class="text-muted">Sunday @ 8pm</small>
+            </div>
+        </div>
+        <div class="next-game">
+            <div class="message">
+                <p><b>Detroit @ Portland</b> Portland is the favorite</p>
+                <small class="text-muted">Sunday @ 8pm</small>
+            </div>
+        </div>
+        <div class="next-game">
+            <div class="message">
+                <p><b>Philli @ Phoenix</b> Phoenix is the favorite </p>
+                <small class="text-muted">Sunday @ 8pm</small>
+            </div>
+        </div>
+        <div class="next-game">
+            <div class="message">
+                <p><b>GSW @ New Orleans</b> GSW is the favorite</p>
+                <small class="text-muted">Sunday @ 8pm</small>
+            </div>
+        </div>
+        <div class="next-game">
+            <div class="message">
+                <p><b>GSW @ New Orleans</b> GSW is the favorite</p>
+                <small class="text-muted">Sunday @ 8pm</small>
+            </div>
+        </div>
+    </div>
+    <a href="#">Show All</a>
     `
     container.style.gridTemplateColumns = '15rem auto 23rem';
     themeToggler = document.querySelector(".theme-toggler");
@@ -346,8 +312,6 @@ upcomingBtn.addEventListener('click', function(e) {
     `
     container.style.gridTemplateColumns = '15rem 80rem auto';
     console.log(mainView.querySelector(".current-date").innerText);
-    // themeToggler.querySelectorAll('span')[0].classList.add('active');
-    // themeToggler.querySelectorAll('span')[1].classList.remove('active');
 });
 
 performanceBtn.addEventListener('click', function(e) {

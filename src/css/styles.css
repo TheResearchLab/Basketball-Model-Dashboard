@@ -359,11 +359,11 @@ main .incorrect {
 }
 
 /* must have to do with the logic of screen size */
-.topBtn button {
+.rightTop button {
     display: none;
 }
 
-.topBtn {
+.rightTop {
     height: 2rem;
     display: flex;
     justify-content: flex-end;
@@ -397,11 +397,11 @@ main .incorrect {
     border-radius: var(--border-radius-1);
 }
 
-.right .upcoming-schedule {
+.right .rightBottom {
     margin-top: 2rem;
 }
 
-.right .upcoming-schedule h2{
+.right .rightBottom h2{
     margin-bottom: 1.4rem;
 }
 
@@ -428,7 +428,7 @@ main .incorrect {
 }
 
 
-.right .upcoming-schedule a{
+.right .rightBottom a{
     text-align: center;
     display:block;
     margin: 1rem;
