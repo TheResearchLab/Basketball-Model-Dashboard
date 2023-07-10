@@ -42,6 +42,12 @@ const toggleTheme = function() {
 // Light - Dark Theme
 themeToggler.addEventListener('click',toggleTheme);
 
+
+// Main Element Listener
+mainView.addEventListener('click',function(e) {
+    console.log(e.target);
+})
+
 // Page Navigation
 
 const activeEl = function() {
@@ -238,11 +244,7 @@ dashboardBtn.addEventListener('click', function(e) {
     </div>
     <a href="#">Show All</a>
     `
-    container.style.gridTemplateColumns = '15rem auto 23rem';
-    themeToggler = document.querySelector(".theme-toggler");
-    // themeToggler.addEventListener('click',toggleTheme);
-    
-    
+    container.style.gridTemplateColumns = '15rem auto 23rem'; 
 
 
 });
@@ -271,35 +273,62 @@ upcomingBtn.addEventListener('click', function(e) {
             <li>Sat</li>
         </ul>
         <ul class="days">
-            <li class="inactive">28</li>
-            <li class="inactive">29</li>
-            <li class="inactive">30</li>
-            <li class="inactive">31</li>
+            <li class="inactive">
+                <p class="day">28</p>
+                <p class="games"></p>
+            </li>
+            <li class="inactive">
+                <p class="day">29</p>
+                <p class="games"></p>
+            </li>
+            <li class="inactive">
+                <p class="day">30</p>
+                <p class="games"></p>
+            </li>
+            <li class="inactive">
+                <p class="day">31</p>
+                <p class="games"></p>
+            </li>
             <li>1</li>
-            <li>2</li>
+            <li>
+                <p class="day">2</p>
+                <p class="games">•</p>
+            </li>
             <li>3</li>
-            <li>4</li>
+            <li>
+                <p class="day">4</p>
+                <p class="games"></p>
+            </li>
             <li>5</li>
             <li>6</li>
             <li>7</li>
             <li>8</li>
             <li>9</li>
             <li>10</li>
-            <li>11</li>
+            <li>
+                <p class="day">11</p>
+                <p class="games"></p>
+            </li>
             <li>12</li>
             <li>13</li>
             <li>14</li>
             <li>15</li>
             <li>16</li>
             <li>17</li>
-            <li>18</li>
+            <li>
+                <p class="day">18</p>
+                <p class="games">•</p>
+            </li>
             <li>19</li>
             <li>20</li>
             <li>21</li>
             <li>22</li>
             <li>23</li>
             <li>24</li>
-            <li>25</li>
+            <li>
+                <p class="day">25</p>
+                <p class="games"></p>
+            </li>
             <li>26</li>
             <li>27</li>
             <li>28</li>

@@ -647,35 +647,45 @@ main header .calendarNav span:last-child {
 .calendar ul li {
     position: relative;
     width: calc(100%/7);
+    height: 63px;
 }
 
 .calendar .days li {
     z-index: 1;
     cursor: pointer;
     color: var(--color-primary);
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 /* Need to understand what's going on */
-.calendar .days li::before {
+.calendar .days li .day::before {
     position: absolute;
     content:"";
     height: 40px;
     width: 40px;
-    top: 50%;
+    top: 10%;
     left: 50%;
     z-index: -1;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+    /* padding-top: 20px; */
 }
 
-.days li:hover::before {
+.days li .day:hover::before {
     background: var(--color-info-light);
 }
 
 .days li.inactive {
     color:lightgray;
 }
+
+.days li .games {
+    padding-top: 10px;
+    font-size: xx-large;
+    color: var(--color-incorrect)
+}
+
+
 
 
 
