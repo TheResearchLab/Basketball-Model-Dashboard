@@ -23,10 +23,13 @@ const months = ['January', 'February','March','April','May','June','July','Augus
 //container
 const container = document.querySelector('.container');
 
-// open and close sidebar
-menuBtn.addEventListener('click', ()=> {
-    sideMenu.style.display = 'block';
-})
+//matchup window
+let matchupView; 
+
+// open and close sidebar - need to add a menubtn to other pages too
+// menuBtn.addEventListener('click', ()=> {
+//     sideMenu.style.display = 'block';
+// })
 
 closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';
@@ -45,7 +48,13 @@ themeToggler.addEventListener('click',toggleTheme);
 
 // Main Element Listener
 mainView.addEventListener('click',function(e) {
-    console.log(e.target);
+    if(!upcomingBtn.classList.contains('active')) return;    
+    if(e.target.matches('.games')) {
+        matchupView.style.display = "block";
+    } else {
+        matchupView.style.display = "none";
+    }
+    // console.log(e.target.style);
 })
 
 // Page Navigation
@@ -338,9 +347,18 @@ upcomingBtn.addEventListener('click', function(e) {
         </ul>
                 
         </div>
+
+        
+        <div id="myModal" class="matchup">
+            <div class="matchup-content">
+              <span class="closeMatchup">x</span>
+              <p>This is a modal popup.</p>
+            </div>
+          </div>
     `
     container.style.gridTemplateColumns = '15rem 80rem auto';
     console.log(mainView.querySelector(".current-date").innerText);
+    matchupView = document.querySelector('.matchup');
 });
 
 performanceBtn.addEventListener('click', function(e) {
