@@ -298,52 +298,130 @@ upcomingBtn.addEventListener('click', function(e) {
                 <p class="day">31</p>
                 <p class="games"></p>
             </li>
-            <li>1</li>
+            <li>
+                <p class="day">1</p>
+                <p class="games"></p>
+            </li>
             <li>
                 <p class="day">2</p>
                 <p class="games">•</p>
             </li>
-            <li>3</li>
+            <li>
+                <p class="day">3</p>
+                <p class="games"></p>
+            </li>
             <li>
                 <p class="day">4</p>
                 <p class="games"></p>
             </li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
+            <li>
+                <p class="day">5</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">6</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">7</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">8</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">9</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">10</p>
+                <p class="games"></p>
+            </li>
             <li>
                 <p class="day">11</p>
                 <p class="games"></p>
             </li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
+            <li>
+                <p class="day">12</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">13</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">14</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">15</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">16</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">17</p>
+                <p class="games"></p>
+            </li>
             <li>
                 <p class="day">18</p>
                 <p class="games">•</p>
             </li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
+            <li>
+                <p class="day">19</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">20</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">21</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">22</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">23</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">24</p>
+                <p class="games"></p>
+            </li>
             <li>
                 <p class="day">25</p>
                 <p class="games"></p>
             </li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li class="inactive">1</li>
+            <li>
+                <p class="day">26</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">27</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">28</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">29</p>
+                <p class="games"></p>
+            </li>
+            <li>
+                <p class="day">30</p>
+                <p class="games"></p>
+            </li>
+            <li class="inactive">
+                <p class="day">1</p>
+                <p class="games"></p>
+            </li>
         </ul>
                 
         </div>
