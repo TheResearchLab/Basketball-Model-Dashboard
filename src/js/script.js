@@ -38,6 +38,19 @@ closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';
 })
 
+
+// Main Element Listener
+container.addEventListener('click',function(e) {
+    if(!upcomingBtn.classList.contains('active')) return;    
+    // console.log(e.target);
+    if(e.target.matches('.games')) {
+        matchupView.style.display = "block";
+    } 
+    if(e.target.matches('.closeMatchup')) {
+        matchupView.style.display = "none";
+    }
+})
+
 const toggleTheme = function() {
     themeToggler.querySelectorAll('span')[0].classList.toggle('active');
     themeToggler.querySelectorAll('span')[1].classList.toggle('active');
