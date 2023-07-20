@@ -21,7 +21,6 @@ const settingsBtn = document.querySelector("#settings");
 const mainView = document.querySelector("main");
 const rightBottomView = document.querySelector(".rightBottom");
 
-const months = ['January', 'February','March','April','May','June','July','August','September','October', 'November','December'];
 
 //container
 const container = document.querySelector('.container');
@@ -39,7 +38,7 @@ closeBtn.addEventListener('click', () => {
 })
 
 
-// Main Element Listener
+// Container Element Listener
 container.addEventListener('click',function(e) {
     if(!upcomingBtn.classList.contains('active')) return;    
     // console.log(e.target);
@@ -124,10 +123,10 @@ performanceBtn.addEventListener('click', function(e) {
     clearPage(); 
 });
 
-backtestBtn.addEventListener('click', function(e) {
-    changeActivePage(e,"#backtest"); 
-    clearPage();  
-});
+// backtestBtn.addEventListener('click', function(e) {
+//     changeActivePage(e,"#backtest"); 
+//     clearPage();  
+// });
 
 aboutUsBtn.addEventListener('click', function(e) {
     changeActivePage(e,"#aboutUs");   
