@@ -321,6 +321,7 @@ main table tbody td {
     height: 2.8rem;
     border-bottom: 1px solid var(--color-light);
     color: var(--color-dark-variant);
+    padding: 6px;
 }
 
 main table tbody tr:last-child td {
@@ -756,6 +757,22 @@ main .outcomes > div {
 main .outcomes > div:hover {
     box-shadow: none;
 }
+
+/*================ Boxscores ==============*/
+.matchupGraphic {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+}
+
+.at {
+    margin-top: 5rem;
+}
+
+
+.boxScoreTable #bs {
+    padding-left: 77px;
+}
+
 
 /*======================= PerformanceRB ======================*/
 
