@@ -212,3 +212,38 @@ new Chart(ctr, {
         }
     }
 });
+
+//const topN = document.getElementById('topN');
+
+
+ // Sample data for the chart
+ const chartData = {
+    labels: ['LAL', 'DET', 'GSW', 'DAL', 'MIA'],
+    datasets: [{
+      label: 'Data',
+      data: [.88, .74, .65, .60, .50],
+      backgroundColor: 'rgba(54, 162, 235, 0.8)',
+      borderColor: 'rgba(54, 162, 235, 1)',
+      borderWidth: 1
+    }]
+  };
+
+  // Chart configuration
+  const chartConfig = {
+    type: 'bar',
+    data: chartData,
+    options: {
+      indexAxis:'y',
+      scales: {
+        x: {
+          beginAtZero: true
+        }
+      },
+      responsive: true,
+      maintainAspectRatio: false
+    }
+  };
+
+  // Get the canvas element and render the chart
+  const myContext = document.getElementById('myHorizontalBarChart')//.getContext('2d');
+  new Chart(myContext, chartConfig);
